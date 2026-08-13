@@ -1,0 +1,264 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% -----------------------------------------------------
+% bvraghav-tiet-ucs503p-article.sty
+% -----------------------------------------------------
+
+% Variable: Lab Instructor
+\makeatletter \newcommand{\BvrSetLabInstructor}[1]{%
+  \gdef\Bvr@LabInstructor{#1}}
+% default
+\newcommand{\Bvr@LabInstructor}{Dr. Raghav %
+  B. Venkataramaiyer}
+% public accessor
+\newcommand{\BvrLabInstructorValue}{\Bvr@LabInstructor}
+\makeatother
+
+% Add subtitle
+\usepackage{titling}
+% -- Set title bold
+\pretitle{\begin{center}\bfseries\fontsize{18bp}{18bp}\selectfont}
+\makeatletter
+\newcommand{\BvrSubtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip 0.5em}%
+}
+\makeatother
+
+% Hints in the section title(s)
+\newcommand{\BvrHint}[1]{%
+  {\normalfont\normalsize\itshape\hfill #1}}
+
+% -----------------------------------------------------
+
+\title{Thapar Exchange -- Campus Marketplace \& Resource Sharing Platform}
+
+\BvrSetLabInstructor{Paramveer Sidhu}
+
+\BvrSubtitle{%
+  Project Proposal for UCS503P  \\
+  Submitted to: \BvrSetLabInstructor{Paramveer Sidhu}
+  Thapar Institute of Engineering and Technology% 
+}
+
+\author{
+  Kanishk Khinchi, CSED%
+  \thanks{Roll No: \texttt{1024031005}, %
+    Email: \texttt{kkhinchi\_be24@thapar.edu}}
+  \and
+  Mahesh, CSED%
+  \thanks{Roll No: \texttt{1024030290}, %
+    Email: \texttt{mkumar\_be24@thapar.edu}}
+  \and
+  Amrita, CSED%
+  \thanks{Roll No: \texttt{1024030729}, %
+    Email: \texttt{aamrita\_be24@thapar.edu}}
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Higher-order goal %
+  \BvrHint{\ldots secondary framing}}
+
+The higher-order goal of Thapar Exchange is to promote efficient and sustainable resource sharing within the TIET student community. By creating a dedicated campus marketplace, the project aims to reduce unnecessary purchases, improve reuse of useful items, and make student-to-student exchange more convenient and organized.
+
+The engineering objective is to convert this idea into a practical, measurable, and deployable web-based platform that can support buying, selling, exchanging, lending, and borrowing of resources within the campus.
+
+\section{Time-to-value %
+\BvrHint{\ldots primary heuristic}}
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item The first iteration will focus on delivering a working marketplace with user authentication, item listings, and basic search functionality.
+    \item Features will be developed incrementally so that usable functionality is available early instead of waiting for the complete system.
+    \item Feedback from TIET students will be used to improve usability, search, listing management, and resource-sharing features in later iterations.
+\end{itemize}
+
+\section{Problem Statement}
+Students at Thapar Institute of Engineering and Technology often need to buy, sell, exchange, or borrow items such as books, calculators, electronics, cycles, lab equipment, and hostel essentials. Currently, such exchanges mainly happen through scattered WhatsApp groups, personal contacts, or informal communication.
+
+This creates several problems:
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Fragmented communication:} Students have to search through multiple groups and contacts to find required items.
+    \item \textbf{Limited reach:} Sellers and students offering resources may not be able to reach interested students across the campus.
+    \item \textbf{Lack of organization:} There is no structured system to categorize, search, filter, and manage available items.
+    \item \textbf{Trust and relevance:} Public marketplace platforms are not specifically designed for the TIET student community.
+\end{itemize}
+
+\textbf{Why this matters:} A dedicated campus marketplace can make resource sharing faster, easier, and more organized while encouraging reuse of items within the student community.
+
+\section{Proposed Solution %
+\BvrHint{\ldots Software Proposition}}
+
+\subsection{Overview}
+We propose \textbf{Thapar Exchange}, a web-based campus marketplace and resource sharing platform exclusively for the TIET student community. The platform will allow students to buy, sell, exchange, lend, or borrow useful items within the campus.
+
+The system will provide the following major features:
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Student authentication:} Users will register and log in using their TIET identity.
+    \item \textbf{Item listings:} Students can post items with title, description, category, price, condition, and images.
+    \item \textbf{Search and filtering:} Users can search items and filter them based on category, price, and availability.
+    \item \textbf{Resource sharing:} Students can offer items for borrowing or exchange in addition to normal buying and selling.
+    \item \textbf{Contact mechanism:} Interested students can contact the item owner through the platform.
+    \item \textbf{Listing management:} Users can edit, remove, or mark their listings as sold or unavailable.
+\end{itemize}
+
+\subsection{Core Workflow}
+\begin{enumerate}[leftmargin=0.7cm]
+    \item A student logs into the platform.
+    \item The student creates a listing for an item they want to sell, exchange, lend, or share.
+    \item Other students browse or search for available items.
+    \item An interested student views the listing and contacts the owner.
+    \item After the transaction or exchange is completed, the owner marks the listing as unavailable or completed.
+\end{enumerate}
+
+\subsection{Operational Scope}
+\begin{itemize}[leftmargin=0.7cm]
+    \item The platform will initially be designed specifically for students of Thapar Institute of Engineering and Technology.
+    \item The application will use a responsive web interface so that it can be accessed easily from laptops and mobile devices.
+    \item The first version will focus on essential marketplace and resource-sharing functionality before adding advanced features.
+\end{itemize}
+\section{Solution Approach %
+\BvrHint{\ldots Engineering focus}}
+
+The project will be developed as a web-based software system focused on simplicity, usability, and maintainability for the TIET student community.
+
+\subsection{Marketplace Management}
+The platform will provide a structured system for creating and managing listings.
+\begin{itemize}[leftmargin=0.7cm]
+    \item Users can create listings with item name, description, category, price, condition, and images.
+    \item Listings can be edited, removed, or marked as completed by their owners.
+    \item Categories and filters will help users quickly discover relevant items.
+\end{itemize}
+
+\subsection{Web Architecture}
+The application will follow a typical 3-tier web architecture:
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Frontend:} responsive user interface for browsing, searching, creating, and managing listings.
+    \item \textbf{Backend API:} handles authentication, user accounts, listings, search, and marketplace operations.
+    \item \textbf{Database:} stores users, item listings, categories, availability status, and transaction-related information.
+\end{itemize}
+
+\subsection{Authentication and Access}
+Only authenticated users will be allowed to create and manage listings. The system will be designed primarily for the TIET student community to provide a more relevant and trusted marketplace environment.
+
+\subsection{CI/CD and Development Process}
+CI/CD practices will be used to:
+\begin{itemize}[leftmargin=0.7cm]
+    \item Automatically build and test the application after code changes.
+    \item Detect errors early during development.
+    \item Support frequent and reliable updates to the project.
+\end{itemize}
+\section{Evaluation Criterion %
+\BvrHint{\ldots measurable and attributable}}
+
+The success of Thapar Exchange will be evaluated using measurable indicators related to usability, marketplace activity, and system performance.
+
+\subsection{Primary Evaluation Metric}
+\textbf{Successful listing discovery:} The platform should allow students to quickly find relevant items through search, categories, and filters.
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item Users should be able to create and publish a listing successfully.
+    \item Students should be able to search and filter available listings without unnecessary navigation.
+    \item Listing details should clearly provide all information required to contact the owner.
+\end{itemize}
+
+\subsection{Secondary Evaluation Metrics}
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Usability:} Users should be able to browse, post, and manage listings easily.
+    \item \textbf{Performance:} Common pages and searches should respond within a reasonable time.
+    \item \textbf{Reliability:} Core features such as login, listing creation, search, and listing management should operate consistently.
+    \item \textbf{User feedback:} Feedback from pilot users will be collected to identify usability issues and possible improvements.
+\end{itemize}
+\subsection{Pilot Validation Plan}
+\begin{itemize}[leftmargin=0.7cm]
+    \item Test the system with a small group of TIET students.
+    \item Ask users to perform common tasks such as creating a listing, searching for an item, and contacting an owner.
+    \item Record feedback and improve the system based on the identified issues.
+\end{itemize}
+\section{Scalability %
+\BvrHint{\ldots with foresight}}
+
+Thapar Exchange will be designed so that the platform can support an increasing number of students, listings, and marketplace activities.
+
+\begin{enumerate}[leftmargin=0.7cm]
+    \item \textbf{Application scalability:}
+    \begin{itemize}[leftmargin=0.7cm]
+        \item Frontend and backend components will be kept separate.
+        \item Pagination will be used when displaying large numbers of listings.
+        \item Database indexing can be applied to frequently searched fields such as category, price, and availability.
+        \item The backend API will be designed to handle multiple users and requests efficiently.
+    \end{itemize}
+
+    \item \textbf{Deployment scalability:}
+    \begin{itemize}[leftmargin=0.7cm]
+        \item The application can be deployed using common cloud or web hosting services.
+        \item The database can be migrated to a managed database service as usage increases.
+        \item CI/CD can be used to deploy updates reliably as the project grows.
+    \end{itemize}
+\end{enumerate}
+
+\section{Engine availability heuristic}
+
+The technologies required to build Thapar Exchange are mature, widely available, and suitable for a semester-level web development project.
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item A modern frontend framework can be used to build a responsive user interface.
+    \item A backend framework can provide REST APIs, authentication, and marketplace operations.
+    \item A relational or document database can store users, listings, categories, and transaction-related data.
+    \item Image storage can be used for product and resource listing photographs.
+    \item Standard testing frameworks can be used for unit and integration testing.
+    \item GitHub Actions or similar CI/CD tools can automate testing and deployment.
+\end{itemize}
+
+These existing technologies allow the team to focus on building a reliable and usable campus marketplace rather than developing basic infrastructure from scratch.
+\section{Project scope and deliverables %
+\BvrHint{\ldots iteration-friendly}}
+
+\subsection{Initial deliverable %
+\BvrHint{\ldots first iteration}}
+\begin{itemize}[leftmargin=0.7cm]
+    \item User registration and login
+    \item Create, edit, delete, and manage item listings
+    \item Browse listings by category
+    \item Search and filter available items
+    \item View detailed listing information
+    \item Mark listings as sold, exchanged, lent, or unavailable
+    \item Basic frontend and backend testing
+    \item Initial deployment of the working web application
+\end{itemize}
+
+\subsection{Subsequent deliverables}
+\begin{itemize}[leftmargin=0.7cm]
+    \item Improved search and filtering
+    \item Better image handling for listings
+    \item In-platform communication between interested students and item owners
+    \item User feedback and reporting features
+    \item Improved UI and mobile responsiveness
+    \item Performance improvements and deployment refinement
+\end{itemize}
+
+\section{Risks and mitigations}
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Fake or misleading listings:} Only authenticated users will be allowed to create listings, and reporting features can be added for suspicious content.
+    \item \textbf{Privacy concerns:} Only necessary user information will be collected and exposed on the platform.
+    \item \textbf{Inactive listings:} Users will be able to mark items as sold, exchanged, lent, or unavailable.
+    \item \textbf{Low user adoption:} The interface will be kept simple and focused on common student marketplace needs.
+    \item \textbf{Technical failures:} Testing and CI/CD practices will be used to detect issues early and maintain reliable deployments.
+\end{itemize}
+
+\section{Summary}
+Thapar Exchange is a campus-focused web platform designed to simplify buying, selling, exchanging, lending, and borrowing of useful resources among TIET students. The project addresses the limitations of scattered communication channels by providing a structured marketplace with authentication, item listings, search and filtering, listing management, and resource-sharing features.
+
+The system will be developed using standard web technologies, scalable architecture, testing practices, and CI/CD support. The project focuses on usability, reliability, and practical deployment while providing a useful digital platform for the TIET student community.
+
+\end{document}
