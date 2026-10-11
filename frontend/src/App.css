@@ -1,0 +1,110 @@
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 clamp(1.25rem, 7vw, 6rem);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header {
+  min-height: 5.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 0.7rem;
+  background: var(--green);
+  color: white;
+}
+
+.campus-label,
+.site-footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.welcome {
+  display: flex;
+  width: min(100%, 48rem);
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 0 7rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  letter-spacing: -0.06em;
+  line-height: 1.03;
+}
+
+.intro {
+  max-width: 37rem;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.coming-soon {
+  margin: 2rem 0 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.site-footer {
+  min-height: 4.5rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 520px) {
+  .campus-label {
+    max-width: 8rem;
+    text-align: right;
+  }
+
+  .site-footer {
+    gap: 1rem;
+    font-size: 0.78rem;
+  }
+}
