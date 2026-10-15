@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ListingStatus {
+  AVAILABLE
+  UNAVAILABLE
+}
+
+enum BookingStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CANCELLED
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  listings     Listing[]
+  bookings     Booking[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Listing {
+  id          String        @id @default(cuid())
+  title       String
+  description String
+  category    String
+  pricePerDay Decimal       @db.Decimal(10, 2)
+  imageUrl    String?
+  status      ListingStatus @default(AVAILABLE)
+  ownerId     String
+  owner       User          @relation(fields: [ownerId], references: [id])
+  bookings    Booking[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Booking {
+  id        String        @id @default(cuid())
+  listingId String
+  renterId  String
+  status    BookingStatus @default(PENDING)
+  listing   Listing       @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  renter    User          @relation(fields: [renterId], references: [id], onDelete: Cascade)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([listingId, status])
+  @@index([renterId, createdAt])
+}
