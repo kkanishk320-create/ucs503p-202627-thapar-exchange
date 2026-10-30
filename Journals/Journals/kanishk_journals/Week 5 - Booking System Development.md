@@ -1,11 +1,12 @@
 #WEEK 5-
-Fixed UI-related bugs.
-Improved the overall page layout.
-Corrected alignment and spacing issues.
-Tested website responsiveness.
-Improved form usability.
-Checked buttons and navigation links.
-Improved listing card presentation.
-Fixed frontend integration errors.
-Improved consistency across different pages.
-Performed final frontend verification
+Performed functional testing of the application.
+Executed previously prepared test cases.
+Tested valid and invalid user inputs.
+Checked listing creation and retrieval.
+Tested booking workflows.
+Checked API error responses.
+Performed regression testing after bug fixes.
+Recorded test results.
+Prepared a list of resolved bugs.
+Updated the testing documentation.
+Prepared screenshots and supporting project evidence.
