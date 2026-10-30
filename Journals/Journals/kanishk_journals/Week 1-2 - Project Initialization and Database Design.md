@@ -1,24 +1,24 @@
 #WEEK 1-
-Studied the project requirements and objectives.
-Analysed the expected user interface of the Thapar Exchange website.
-Identified the main pages required for the website.
-Planned the navigation structure and layout.
-Researched suitable frontend technologies.
-Created rough wireframes for the website.
-Planned the colour scheme, typography, and overall design.
-Identified reusable UI components.
-Studied responsive web design principles.
-Discussed the frontend structure with the team.
-Set up the frontend development environment.
+Studied the complete project requirements.
+Identified the major functionalities that needed testing.
+Prepared an initial project workflow.
+Listed possible user scenarios.
+Identified functional and non-functional requirements.
+Prepared an initial test-case document.
+Researched software testing techniques.
+Identified possible application errors and failure scenarios.
+Created the project documentation structure.
+Coordinated task distribution among all team members.
 
 
 #WEEK 2-
-Created the frontend project structure.
-Installed the required npm dependencies.
-Created the initial application layout.
-Developed the navigation bar.
-Worked on the home page structure.
-Added basic styling using CSS.
-Created reusable frontend components.
-Implemented basic page navigation.
-Checked the initial interface for layout issues
+Prepared the initial test-case list.
+Identified the expected behaviour of each major page.
+Created test scenarios for navigation.
+Prepared test scenarios for form.
+Identified possible input-validation issues.
+Started documenting the development environment.
+Maintained records of technologies and tools used.
+Reviewed the frontend structure.
+Reviewed the backend structure.
+Coordinated progress updates with team members
