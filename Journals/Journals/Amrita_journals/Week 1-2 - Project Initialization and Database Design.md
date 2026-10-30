@@ -1,3 +1,4 @@
+#WEEK 1-
 Studied the project requirements and objectives.
 Analysed the expected user interface of the Thapar Exchange website.
 Identified the main pages required for the website.
@@ -11,7 +12,7 @@ Discussed the frontend structure with the team.
 Set up the frontend development environment.
 
 
-
+#WEEK 2-
 Created the frontend project structure.
 Installed the required npm dependencies.
 Created the initial application layout.
